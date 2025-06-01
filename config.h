@@ -1,8 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 4;        /* border pixel of windows */
-static const unsigned int gappx     = 9;        /* gaps between windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
+static const unsigned int gappx     = 4;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 1;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
@@ -77,7 +77,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_u,	   spawn,	   {.v = volumeupcmd} },
 	{ MODKEY|ShiftMask,		XK_f,	   spawn,	   {.v = filemanagercmd} },
 	{ MODKEY|ShiftMask,		XK_b,	   spawn,	   {.v = browsercmd } },
-	{ 0,				XK_Print,  spawn,	   {.v = printscreencmd } },
+	{ MODKEY,			XK_F12,    spawn,	   {.v = printscreencmd } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,             		XK_c,      spawn,     	   {.v = changebgcmd } },
